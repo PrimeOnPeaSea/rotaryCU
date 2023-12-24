@@ -458,7 +458,7 @@
 
         #section-d103e768-526d-4732-9a7e-bfb231062c94 .gutentor-single-item-0 .gutentor-bg-image,
         .imageSlider-repeater .gutentor-single-item-0 .gutentor-bg-image {
-            background-image: url(wp-content/uploads/2023/07/main-banner-photo-copy.jpg)
+            background-image: url('wp-content/uploads/2023/07/slider/image(3).jpeg')
         }
 
         #section-d103e768-526d-4732-9a7e-bfb231062c94 .gutentor-single-item .bg-color-box {
@@ -2060,6 +2060,23 @@ text-align:Center;
         <!-- End of .main-wrapper -->
     </div>
     <!-- End of .cwp-offcanvas-body-wrapper -->
+    <script>
+        // Array of images
+var images = ['wp-content/uploads/2023/07/slider/image(1).jpeg', 'wp-content/uploads/2023/07/slider/image(2).jpeg', 'wp-content/uploads/2023/07/slider/image(3).jpeg', 'wp-content/uploads/2023/07/slider/image(4).jpeg'];
+var index = 0;
+// #section-d103e768-526d-4732-9a7e-bfb231062c94 .gutentor-single-item-0 .gutentor-bg-image,
+//         .imageSlider-repeater .gutentor-single-item-0 .gutentor-bg-image
+const slel = document.querySelector('#section-d103e768-526d-4732-9a7e-bfb231062c94 .gutentor-single-item-0 .gutentor-bg-image, .imageSlider-repeater .gutentor-single-item-0 .gutentor-bg-image');
+
+function changeBackgroundImage() {
+    slel.style.backgroundImage = "url('" + images[index] + "')";
+    index = (index + 1) % images.length;
+}
+
+// Change background image every 5 seconds
+setInterval(changeBackgroundImage, 5000);
+
+    </script>
     <script type='text/javascript' src='wp-content/plugins/yottie-lite/assets/yottie-lite/dist/jquery.yottie-lite.bundled.js?ver=1.3.3' id='yottie-lite-js'></script>
     <script type='text/javascript' src='wp-content/plugins/gutentor/assets/library/wow/wow.min.js?ver=1.2.1' id='wow-js'></script>
     <script type='text/javascript' src='wp-content/plugins/gutentor/assets/library/countUp/countUp.min.js?ver=1.9.3' id='countUp-js'></script>
